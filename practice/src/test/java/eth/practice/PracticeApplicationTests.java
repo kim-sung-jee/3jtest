@@ -22,17 +22,9 @@ class PracticeApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	@Autowired
-	HttpService httpService;
-
-	@Test
-	public void GetClientVersion() throws IOException{
-		String jsonInput = "{\"jsonrpc\":\"2.0\",\"method\":\"web3_clientVersion\",\"params\":[],\"id\":67}";
-		EthResultVO result = httpService.callEthFunction(jsonInput, EthResultVO.class);
-		System.out.println(result);
-	}
 	@Test
 	public void ConnectEth() throws ExecutionException, InterruptedException, IOException {
+		Web3j web3j = Web3j.build(new org.web3j.protocol.http.HttpService(infura_url));
 		Web3ClientVersion web3ClientVersion = web3j.web3ClientVersion().send();
 		System.out.println(web3ClientVersion.getWeb3ClientVersion());
 
@@ -40,5 +32,10 @@ class PracticeApplicationTests {
 //		Web3ClientVersion web3ClientVersion=web3.web3ClientVersion().sendAsync().get();
 //		String clientVersion = web3ClientVersion.getWeb3ClientVersion();
 //		System.out.println(clientVersion);
+	}
+	@Test
+	public void helloworld(){
+		Web3j web3j = Web3j.build(new org.web3j.protocol.http.HttpService(infura_url));
+
 	}
 }

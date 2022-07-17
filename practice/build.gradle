@@ -15,7 +15,6 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.web3j:core:4.8.7'
-	implementation 'com.squareup.okhttp3:okhttp:4.9.3'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
