@@ -7,7 +7,7 @@ build/
 !**/src/test/**/build/
 
 practice/src/main/resources/application-API-KEY.properties
-
+/src/main/java/utils/Environment.java
 application-API-KEY.properties
 
 
