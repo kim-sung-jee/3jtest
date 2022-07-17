@@ -22,6 +22,8 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+/src/main/java/utils/Environment.java
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
