@@ -9,3 +9,6 @@ spring:
       ddl-auto: create
   profiles:
     include: API-KEY
+
+file:
+  dir: C:/Users/김성지/Pictures/springtest/
