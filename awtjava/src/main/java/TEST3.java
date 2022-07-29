@@ -17,17 +17,31 @@ public class TEST3 {
         Graphics g = img.getGraphics();
         g.setFont(font);
         FontRenderContext fontRenderContext = g.getFontMetrics().getFontRenderContext();
-        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"a");
+        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"ㄱ");
 
         System.out.println(g.getFontMetrics().getFont());
         System.out.println(glyphVector.getGlyphOutline(0).getBounds());
-        System.out.println(glyphVector.getGlyphLogicalBounds(0).getBounds());
-        System.out.println(glyphVector.getGlyphCode(0));
+
+        System.out.println(glyphVector.getGlyphCode(0));// unicode
         System.out.println(glyphVector.getGlyphOutline(0).getBounds2D());
-//        System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getY());
+        System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMaxX());
+        System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMinX());
+        System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMaxY());
+        System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMinY());
         System.out.println(glyphVector.getGlyphCharIndex(0));
-
-
+        System.out.println("-----------------");
+        System.out.println(glyphVector.getGlyphLogicalBounds(0).getBounds().getMaxX());
+        System.out.println(glyphVector.getGlyphLogicalBounds(0).getBounds().getMinX());
+        System.out.println(glyphVector.getGlyphLogicalBounds(0).getBounds().getMaxY());
+        System.out.println(glyphVector.getGlyphLogicalBounds(0).getBounds().getMinY());
+        System.out.println("-----------------");
+        System.out.println(glyphVector.getGlyphMetrics(0).getAdvanceX());
+        System.out.println(glyphVector.getGlyphMetrics(0).getAdvanceY());
+        System.out.println(glyphVector.getGlyphMetrics(0).getLSB());
+        System.out.println(glyphVector.getGlyphMetrics(0).getRSB());
+        System.out.println(glyphVector.getGlyphMetrics(0).getType());
+//        System.out.println(glyphVector.getGlyphTransform(0).getScaleX());
+//        System.out.println(glyphVector.getGlyphTransform(0).getScaleY());
 
     }
 
