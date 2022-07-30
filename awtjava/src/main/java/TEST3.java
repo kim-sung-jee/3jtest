@@ -17,12 +17,12 @@ public class TEST3 {
         Graphics g = img.getGraphics();
         g.setFont(font);
         FontRenderContext fontRenderContext = g.getFontMetrics().getFontRenderContext();
-        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"ㄱ");
+        GlyphVector glyphVector = font.createGlyphVector(fontRenderContext,"a");
 
         System.out.println(g.getFontMetrics().getFont());
         System.out.println(glyphVector.getGlyphOutline(0).getBounds());
-
-        System.out.println(glyphVector.getGlyphCode(0));// unicode
+        System.out.println(glyphVector.getNumGlyphs());
+        System.out.println(glyphVector.getGlyphCode(0));// 모르겟다
         System.out.println(glyphVector.getGlyphOutline(0).getBounds2D());
         System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMaxX());
         System.out.println(glyphVector.getGlyphOutline(0).getBounds2D().getMinX());
