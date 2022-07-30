@@ -40,6 +40,12 @@ public class TEST3 {
         System.out.println(glyphVector.getGlyphMetrics(0).getLSB());
         System.out.println(glyphVector.getGlyphMetrics(0).getRSB());
         System.out.println(glyphVector.getGlyphMetrics(0).getType());
+        System.out.println(glyphVector.getGlyphPosition(0));
+        System.out.println(glyphVector.getFont());
+        System.out.println("------------------");
+
+
+
 //        System.out.println(glyphVector.getGlyphTransform(0).getScaleX());
 //        System.out.println(glyphVector.getGlyphTransform(0).getScaleY());
 
